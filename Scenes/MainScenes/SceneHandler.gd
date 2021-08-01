@@ -1,8 +1,9 @@
 extends Node
 
 func _ready():
-	get_node("MainMenu/M/VB/NewGame").connect("pressed", self, "on_new_game_pressed")
-	get_node("MainMenu/M/VB/Quit").connect("pressed", self, "on_quit_game_pressed")
+	var _ignore
+	_ignore = get_node("MainMenu/M/VB/NewGame").connect("pressed", self, "on_new_game_pressed")
+	_ignore = get_node("MainMenu/M/VB/Quit").connect("pressed", self, "on_quit_game_pressed")
 
 func on_new_game_pressed():
 	#remove MainMenu

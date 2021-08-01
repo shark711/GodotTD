@@ -12,3 +12,9 @@ func set_tower_preview(tower_type, mouse_position):
 	add_child(control, true)
 	move_child(get_node("HUD"), get_child_count())
 #	move_child(get_node("TowerPreview"), 0)
+
+func update_tower_preview(new_position, color):
+	get_node("TowerPreview").rect_position = new_position
+	if get_node("TowerPreview/DragTower").modulate != Color(color):
+		get_node("TowerPreview/DragTower").modulate = Color(color)
+
