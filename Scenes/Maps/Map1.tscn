@@ -1,6 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Environment/Tilesets/terrainTiles_default.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environment/Props/treeBrown_large.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Props/treeGreen_large.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/Props/crateMetal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Environment/Props/crateWood.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Turrets/GunT2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Turrets/MissileT1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Turrets/GunT1.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_default.png 0"
@@ -51,6 +58,62 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "treeBrown_large.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "treeGreen_large.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "crateMetal.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 18, 18 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 28, 28 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "crateWood.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 18, 18 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 28, 28 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
 
 [node name="Map1" type="Node2D"]
 
@@ -62,4 +125,15 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -6
 [node name="TowerExclusion" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( 65542, 0, 65538, 65543, 0, 1, 65544, 0, 1, 65545, 0, 1, 65546, 0, 1, 65547, 0, 1, 65548, 0, 1, 65549, 0, 5, 65550, 0, 1, 65551, 0, 1, 65552, 0, 65539, 131078, 0, 0, 131085, 0, 0, 131088, 0, 0, 196614, 0, 0, 196621, 0, 0, 196624, 0, 0, 196626, 0, 65538, 196627, 0, 1, 196628, 0, 1, 196629, 0, 0, 262150, 0, 0, 262157, 0, 0, 262160, 0, 0, 262162, 0, 0, 327686, 0, 0, 327693, 0, 0, 327696, 0, 0, 327698, 0, 0, 393222, 0, 2, 393223, 0, 1, 393224, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 1, 393229, 0, 65541, 393232, 0, 0, 393234, 0, 0, 458758, 0, 0, 458768, 0, 0, 458770, 0, 0, 524294, 0, 0, 524304, 0, 65540, 524305, 0, 1, 524306, 0, 65541, 655358, 0, 0, 655359, 0, 1, 589824, 0, 1, 589825, 0, 1, 589826, 0, 1, 589827, 0, 1, 589828, 0, 1, 589829, 0, 1, 589830, 0, 65541 )
+tile_data = PoolIntArray( 3, 1, 0, 9, 4, 0, 11, 4, 0, 19, 1, 0, 65536, 1, 0, 65542, 0, 65538, 65543, 0, 1, 65544, 0, 1, 65545, 0, 1, 65546, 0, 1, 65547, 0, 1, 65548, 0, 1, 65549, 0, 5, 65550, 0, 1, 65551, 0, 1, 65552, 0, 65539, 131076, 2, 0, 131078, 0, 0, 131079, 4, 0, 131085, 0, 0, 131088, 0, 0, 196609, 3, 0, 196614, 0, 0, 196616, 4, 0, 196618, 1, 0, 196621, 0, 0, 196624, 0, 0, 196626, 0, 65538, 196627, 0, 1, 196628, 0, 1, 196629, 0, 0, 262144, 3, 0, 262150, 0, 0, 262157, 0, 0, 262160, 0, 0, 262162, 0, 0, 327682, 2, 0, 327686, 0, 0, 327687, 1, 0, 327692, 4, 0, 327693, 0, 0, 327696, 0, 0, 327698, 0, 0, 393222, 0, 2, 393223, 0, 1, 393224, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 1, 393229, 0, 65541, 393232, 0, 0, 393233, 1, 0, 393234, 0, 0, 458758, 0, 0, 458768, 0, 0, 458769, 4, 0, 458770, 0, 0, 524291, 1, 0, 524293, 3, 0, 524294, 0, 0, 524301, 4, 0, 524304, 0, 65540, 524305, 0, 1, 524306, 0, 65541, 655358, 0, 0, 655359, 0, 1, 589824, 0, 1, 589825, 0, 1, 589826, 0, 1, 589827, 0, 1, 589828, 0, 1, 589829, 0, 1, 589830, 0, 65541, 589832, 2, 0, 589836, 2, 0, 589837, 2, 0, 655372, 2, 0, 655373, 1, 0, 655379, 1, 0 )
+
+[node name="Turrets" type="Node2D" parent="."]
+
+[node name="GunT1" parent="Turrets" instance=ExtResource( 8 )]
+position = Vector2( 466.768, 470.717 )
+
+[node name="GunT2" parent="Turrets" instance=ExtResource( 6 )]
+position = Vector2( 614.224, 366.308 )
+
+[node name="MissileT1" parent="Turrets" instance=ExtResource( 7 )]
+position = Vector2( 347.908, 473.035 )
