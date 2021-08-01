@@ -13,6 +13,12 @@ func _ready():
 		button.connect("pressed", self, "initiate_build_mode", [button.get_name()])
 
 func _process(delta):
+	# UI animation
+	for button in get_tree().get_nodes_in_group("build_buttons"):
+		button.get_node("Icon").rect_rotation += delta * 100
+		if (button.get_node("Icon").rect_rotation > 360):
+			button.get_node("Icon").rect_rotation -= 360
+	
 	if build_mode:
 		update_tower_preview()
 
@@ -22,6 +28,11 @@ func _unhandled_input(event):
 	if event.is_action_released("ui_accept") and build_mode == true:
 		verify_and_build()
 		cancel_build_mode()
+		
+	if event.is_action_released("hotbar_1") and build_mode == false:
+		initiate_build_mode("Gun")
+	if event.is_action_released("hotbar_2") and build_mode == false:
+		initiate_build_mode("Missile")
 
 
 func initiate_build_mode(tower_type):
