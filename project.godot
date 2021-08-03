@@ -24,6 +24,10 @@ config/name="TD"
 run/main_scene="res://Scenes/MainScenes/SceneHandler.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameData="*res://Singletons/GameData.gd"
+
 [display]
 
 window/size/width=1280
