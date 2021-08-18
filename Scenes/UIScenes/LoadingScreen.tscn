@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/UIScenes/LoadingScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/Art/mm_background.png" type="Texture" id=2]
+
+[node name="LoadingScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mrgn" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="Mrgn"]
+margin_left = 140.0
+margin_top = 640.0
+margin_right = 1140.0
+margin_bottom = 670.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="Mrgn/HBox"]
+margin_right = 1000.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 1000, 30 )
