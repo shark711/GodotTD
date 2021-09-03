@@ -60,7 +60,6 @@ func switch_scene(current_scene_name, to_path_scene, pause_time = 0.001):
 			#Still loading
 			var progress = float(loader.get_stage()) / (loader.get_stage_count()-1)
 			loading_bar.set_progress(progress * 100)
-			print(progress * 100)
 		else:
 			print("SceneHandler: Error while loading scene")
 			loading_bar.queue_free()

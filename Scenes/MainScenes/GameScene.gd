@@ -15,7 +15,7 @@ func _ready():
 	map_node = get_node("Map1")
 	for button in get_tree().get_nodes_in_group("build_buttons"):
 		button.connect("pressed", self, "initiate_build_mode", [button.get_name()])
-	start_next_wave()
+	
 
 
 func _process(delta):
@@ -51,7 +51,7 @@ func start_next_wave():
 	spawn_enemies(wave_data)
 
 func retrieve_wave_data():
-	var wave_data = [["BlueTank", 0.7], ["BlueTank", 0.1]]
+	var wave_data = [["BlueTank", 3.0], ["BlueTank", 0.1]]
 	current_wave += 1
 	enemies_in_wave = wave_data.size()
 	return wave_data
@@ -100,6 +100,7 @@ func verify_and_build():
 		## Test to verify player has enough cash
 		var new_tower = load("res://Scenes/Turrets/" + build_type + ".tscn").instance()
 		new_tower.position = build_location
+		new_tower.built = true
 		map_node.get_node("Turrets").add_child(new_tower, true)
 		map_node.get_node("TowerExclusion").set_cellv(build_tile, 5)
 		## deduct cash
